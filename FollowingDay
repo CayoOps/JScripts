@@ -1,0 +1,35 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Qual dia da semana é hoje? ", function(weekday){
+
+    if(weekday === "segunda"){
+        console.log("Hoje é segunda, então amanhã será Terça!");
+    }else if(weekday === "terça"){
+        console.log("Hoje é Terça, então amanhã será Quarta!");
+    }else if(weekday === "quarta"){
+        console.log("Hoje é Quarta, então amanhã será Quinta!");
+    }else if(weekday === "quinta"){
+        console.log("Hoje é Quinta, então amanhã é Sexta!");
+    }else if(weekday === "sexta"){
+        console.log("Hoje é Sexta, então amanhã será Sábado!");
+    }else if(weekday === "sabado"){
+        console.log("Hoje é Sábado, então amanhã será domingo!!");
+    }else if(weekday === "domingo"){
+        console.log("Hoje é Domingo, então amanhã será Segunda!");
+    }else{
+        console.log("dia da semana digitado errado!! coloque em letras minusculas e sem caracteres especiais!!");
+    }
+
+    rl.close();
+});
+
+rl.on("close", function(){
+    console.log("\n Adeuss!!!");
+    process.exit(0);
+
+});

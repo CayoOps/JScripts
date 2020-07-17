@@ -1,0 +1,27 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Qual a temperatuda em ºC ? \n", function(temperaturacelsius){
+    
+    temperaturafahrenheit = temperaturacelsius * 9/5 + 32 ;
+
+    console.log(`Temperatura em ºCelsius: ${temperaturacelsius}` );
+    console.log(`Temperatura em Fahrenheit: ${temperaturafahrenheit}`);
+
+    if(temperaturacelsius > 25){
+        console.log("Está Calor!! Aproveite!!");
+    }else{
+        console.log("Está Frio!! Se Agasalhe!!");
+    }
+
+    rl.close();
+});
+
+rl.on("close", function(){
+    console.log("\n Adeuss!!!");
+    process.exit(0);
+
+});

@@ -1,0 +1,10 @@
+var prompt = require('prompt');
+
+prompt.start();
+
+console.log("Qual é seu nome?")
+
+prompt.get(['nome'], function(err, result){
+    console.log('Olá queridx ' + result.nome);
+});
+

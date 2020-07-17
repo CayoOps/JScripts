@@ -1,0 +1,24 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Qual o valor para acréscimo de um desconto de 20.6% \n", function(valor){
+    console.log(`Valor Normal: ${valor}`);
+    total = valor ;
+    valor = valor * 0.206 ;
+    
+    console.log(`Valor do desconto: ${valor}`);
+
+    valorcomdesconto = total - valor
+
+    console.log(`Valor com desconto:  ${valorcomdesconto}`)
+
+    rl.close();
+});
+
+rl.on("close", function(){
+    console.log("\nXAU XAU !!!");
+    process.exit(0);
+});

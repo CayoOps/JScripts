@@ -1,0 +1,11 @@
+let number1 = 5
+let number2 = 3
+
+let swap1= number1
+let swap2= number2
+
+number1= swap2
+number2= swap1
+
+console.log(number1);
+console.log(number2);

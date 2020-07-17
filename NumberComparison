@@ -1,0 +1,38 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+
+    input: process.stdin,
+    output: process.stdout
+
+});
+
+rl.question("Escolha dois números: ", function(num1){
+    rl.question("Escolha dois números: ", function(num2){  
+        
+        let diferenca;
+        if(num1 > num2){
+            diferenca = num1 - num2;
+        }else if(num2 > num1){
+            diferenca = num2 - num1;
+        }else{
+            diferenca = 0;
+        }
+
+    
+    if(num1 === num2){
+        console.log(`primeiro número é igual ao segundo! | ${num1} = ${num2} |- A diferença entre eles é: ${diferenca}`);
+    }else if(num1 > num2){
+        console.log(`o primeiro número é maior que o segundo! | ${num1} > ${num2} |- A diferença entre eles é: ${diferenca}`);
+    }else if (num1 < num2){
+        console.log(`o segundo número é maior que o primeiro! | ${num2} > ${num1} |- A diferença entre eles é: ${diferenca}`);   
+    }
+
+    rl.close();
+});
+    });
+
+rl.on("close", function(){
+    console.log("\n Adeuss!!!");
+    process.exit(0);
+
+});

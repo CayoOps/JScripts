@@ -1,0 +1,5 @@
+console.log("Hello World JavaScript");
+console.log("Vamos Realizar algumas somas!");
+console.log("7 + 4");
+console.log(7 + 4);
+console.log("Adeus!!");

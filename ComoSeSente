@@ -1,0 +1,14 @@
+var prompt = require('prompt');
+
+prompt.start();
+ 
+console.log('Como está seu humor hoje?');
+
+prompt.get(['humor'], function(err, result) {
+
+    
+    console.log('  humor >> ' + result.humor);
+});
+
+//Para utilizar inputs no terminal utilizando o npmjs 
+// é utilitário usar 
