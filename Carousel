@@ -1,0 +1,21 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("BEM VINDO AO CARROSEL VIRTUAL, DIGITE O NÚMERO DE VOLTAS QUE ELE DARÁ! >>> ", function(voltas){
+    let contagem = 1;
+    while(contagem <= voltas){
+        console.log(`PULA PULA CARROSEL UPI UPI YAP TAP ^~^~^~^~^~^~^ VOLTA Número ${contagem}`);
+        contagem++;
+    }
+
+    rl.close();
+});
+
+rl.on("close", function(){
+    console.log("\n Adeuss!!!");
+    process.exit(0);
+
+});

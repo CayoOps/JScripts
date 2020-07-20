@@ -1,0 +1,47 @@
+const readline = require("readline");
+const { stdin, stdout } = require("process");
+const rl  = readline.createInterface({
+
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("escolha o número do mês de 1 a 12:", function(mes){
+    console.log(`mes escolhido: ${mes}`)
+    if(mes === "1"){
+        console.log("O mês de janeiro tem 31 dias! ");
+    }else if(mes === "2"){
+        console.log("O mês de fevereiro tem 29 dias!");
+    }else if(mes === "3"){
+        console.log("O mês de março tem 31 dias!");
+    }else if(mes === "4"){
+        console.log("O mes de abril tem 30 dias!");
+    }else if(mes === "5"){
+        console.log("O mes de maio tem 31 dias!")
+    }else if(mes === "6"){
+        console.log("O mes de junho tem 30 dias!")
+    }else if(mes === "7"){
+        console.log("O mes de julho tem 31 dias!")
+    }else if(mes === "8"){
+        console.log("O mês de agosto tem 31 dias!")
+    }else if(mes === "9"){
+        console.log("O mês de setembro tem 30 dias!")
+    }else if(mes === "10"){
+        console.log("O mes de outubro tem 31 dias!")
+    }else if(mes === "11"){
+        console.log("O mes de novembro tem 30 dias!")
+    }else if(mes === "12"){
+        console.log("O mes de dezembro tem 31 dias!")
+    }else{
+        console.log("número digitado não encontrado, porfavor, utilize números de 1 a 12!!")        
+    }
+
+    rl.close();
+
+});
+
+rl.on("close", function(){
+    console.log("\n Adeuss!!!");
+    process.exit(0);
+
+});
